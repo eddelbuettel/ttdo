@@ -1,0 +1,14 @@
+Package: ttdo
+Title: Extend 'tinytest' with 'diffobj'
+Version: 0.0.1
+Author: Dirk Eddelbuettel
+Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Description: The 'tinytest' package offers a leight-weight zero-dependency unit-testing
+ framework to which this package adds support of the 'diffobj' package for 'diff'-style
+ comparison of R objects.
+License: GPL (>= 2)
+NeedsCompilation: no
+Encoding: UTF-8
+LazyData: true
+Imports: tinytest, diffobj
+RoxygenNote: 6.0.1
