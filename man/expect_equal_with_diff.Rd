@@ -6,7 +6,8 @@
 \title{Test for euality with explicit difference}
 \usage{
 expect_equal_with_diff(current, target, tol = sqrt(.Machine$double.eps),
-  mode = "unified", format = "raw", ...)
+  mode = getOption("diffobj.mode", "unified"),
+  format = getOption("diffobj.format", "ansi256"), ...)
 
 expect_equivalent_with_diff(current, target, tol = sqrt(.Machine$double.eps),
   ...)
@@ -20,10 +21,12 @@ expect_equivalent_with_diff(current, target, tol = sqrt(.Machine$double.eps),
 to \code{\link[base]{all.equal} (tolerance)}}
 
 \item{mode}{\code{[character]} Comparison mode passed to \code{diffPrint},
-defaults to \dQuote{unified}}
+defaults to using the \dQuote{diffobj.mode} global option value with
+\dQuote{unified} as fallback if no such option is set}
 
 \item{format}{\code{[character]} Comparison mode passed to \code{diffPrint},
-defaults to \dQuote{raw}}
+defaults to to using the \dQuote{diffobj.format} global option value with
+\dQuote{raw} as fallback if no such option is set}
 
 \item{...}{Passed to \code{all.equal}}
 }

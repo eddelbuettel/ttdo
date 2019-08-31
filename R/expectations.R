@@ -5,9 +5,11 @@
 #' @param tol \code{[numeric]} Test equality to machine rounding. Passed
 #'     to \code{\link[base]{all.equal} (tolerance)}
 #' @param mode \code{[character]} Comparison mode passed to \code{diffPrint},
-#' defaults to \dQuote{unified}
+#' defaults to using the \dQuote{diffobj.mode} global option value with
+#' \dQuote{unified} as fallback if no such option is set
 #' @param format \code{[character]} Comparison mode passed to \code{diffPrint},
-#' defaults to \dQuote{raw}
+#' defaults to to using the \dQuote{diffobj.format} global option value with
+#' \dQuote{raw} as fallback if no such option is set
 #' @param ... Passed to \code{all.equal}
 #'
 #' @return A \code{\link{tinytest}} object. A tinytest object is a
@@ -22,7 +24,9 @@
 #' expect_equivalent_with_diff(2, c(x=2))	# TRUE
 #' expect_equivalent_with_diff(2, c(x=2))	# TRUE
 expect_equal_with_diff <- function(current, target, tol = sqrt(.Machine$double.eps),
-                                   mode="unified", format="raw", ...) {
+                                   mode=getOption("diffobj.mode", "unified"),
+                                   format=getOption("diffobj.format","ansi256"),
+                                   ...) {
 
     ## are there differences in data and/or attributes, or just in the attributes?
     ## borrowed with thanks from tinytest itself

@@ -1,0 +1,11 @@
+2019-08-31  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Date, Version): Version 0.0.2
+
+	* R/expectations.R (expect_equal_with_diff): Defaults for 'format'
+	and 'mode' use global options 'diffobj' uses, plus "ansi256" and
+	"unified" as defaults now that PrairieLearn supports ansi sequences
+
+2019-08-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Date, Version): Initial version 0.0.1
