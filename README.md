@@ -5,6 +5,12 @@
 Extend [tinytest](https://cran.r-project.org/package=tinytest) with 
 [diffobj](https://cran.r-project.org/package=diffobj).
 
+### What does that look like?
+
+Glad you asked:
+
+![](https://eddelbuettel.github.io/ttdo/ttdoDemo.png)
+
 ### Who wrote it?
 
 Dirk Eddelbuettel
