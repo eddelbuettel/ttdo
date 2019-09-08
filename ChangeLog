@@ -1,3 +1,10 @@
+2019-09-08  Dirk Eddelbuettel  <edd@debian.org>
+
+	* demo/expect_equal_with_diff.R: Added simple demo illustrating use
+	* demo/00Index: Added
+
+	* inst/NEWS.Rd: Added
+
 2019-08-31  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Date, Version): Version 0.0.2

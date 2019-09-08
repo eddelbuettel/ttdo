@@ -1,6 +1,6 @@
 
 library(tinytest)
-using(ttdo)  ## use tinytest extension mechanism
+tinytest::using(ttdo)  ## use tinytest extension mechanism
 
 gooddata <- iris
 
