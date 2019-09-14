@@ -1,3 +1,7 @@
+2019-09-13  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .travis.yml: Added Travis CI integration
+
 2019-09-08  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Date, Version): Version 0.0.3
