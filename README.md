@@ -1,6 +1,4 @@
-## ttdo
-
-[![Build Status](https://travis-ci.org/eddelbuettel/ttdo.svg)](https://travis-ci.org/eddelbuettel/ttdo) [![License](https://eddelbuettel.github.io/badges/GPL2+.svg)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/ttdo)](https://cran.r-project.org/package=ttdo)  [![Dependencies](https://tinyverse.netlify.com/badge/ttdo)](https://cran.r-project.org/package=ttdo) [![Downloads](http://cranlogs.r-pkg.org/badges/ttdo?color=brightgreen)](http://www.r-pkg.org/pkg/ttdo)
+## ttdo [![Build Status](https://travis-ci.org/eddelbuettel/ttdo.svg)](https://travis-ci.org/eddelbuettel/ttdo) [![License](https://eddelbuettel.github.io/badges/GPL2+.svg)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/ttdo)](https://cran.r-project.org/package=ttdo)  [![Dependencies](https://tinyverse.netlify.com/badge/ttdo)](https://cran.r-project.org/package=ttdo) [![Downloads](http://cranlogs.r-pkg.org/badges/ttdo?color=brightgreen)](http://www.r-pkg.org/pkg/ttdo)
 
 ### What is it?
 
