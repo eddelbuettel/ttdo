@@ -1,4 +1,4 @@
-#' Test for euality with explicit difference
+#' Test for equality with explicit difference
 #'
 #' @param current \code{[R object or expression]} Outcome or expression under scrutiny.
 #' @param target \code{[R object or expression]} Expected outcome

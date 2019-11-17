@@ -2,7 +2,7 @@
 % Please edit documentation in R/methods.R
 \name{makeDataFrame}
 \alias{makeDataFrame}
-\title{Convert Tinytest Results to Data.Frame}
+\title{Convert tinytest results to data.frame}
 \usage{
 makeDataFrame(x)
 }
@@ -29,7 +29,8 @@ write(tests, testfile)
 # extract testdir
 testdir <- dirname(testfile)
 # run all files starting with 'test' in testdir
-out <- tinytest::run_test_dir(testdir)
+library(tinytest)
+out <- run_test_dir(testdir)
 #
 # convert results
 dat <- makeDataFrame(out)

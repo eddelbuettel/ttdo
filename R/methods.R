@@ -1,4 +1,4 @@
-#' Convert Tinytest Results to Data.Frame
+#' Convert tinytest results to data.frame
 #' 
 #' This method extends the \code{as.data.frame.tinytest} method to handle 
 #' arbitrary attributes attached to each tinytest object.
@@ -21,7 +21,8 @@
 #' # extract testdir
 #' testdir <- dirname(testfile)
 #' # run all files starting with 'test' in testdir
-#' out <- tinytest::run_test_dir(testdir)
+#' library(tinytest)
+#' out <- run_test_dir(testdir)
 #' #
 #' # convert results
 #' dat <- makeDataFrame(out)
@@ -29,7 +30,7 @@
 makeDataFrame <- function(x) {
     ## Borrowed from tinytest::as.data.frame.tinytests
     call_conv <- function(x) {
-        attr(x, "call") <- gsub(" +", " ", paste0(utils::capture.output(print(attributes(x)$call)), collapse = " "))
+        attr(x, "call") <- gsub(" +", " ", paste0(capture.output(print(attributes(x)$call)), collapse = " "))
         x
     }
 

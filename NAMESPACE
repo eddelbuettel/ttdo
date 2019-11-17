@@ -1,5 +1,6 @@
 import(tinytest)
 importFrom(diffobj, diffPrint)
+importFrom(utils, capture.output)
 
 export(expect_equal_with_diff, expect_equivalent_with_diff)
 export(makeDataFrame)
