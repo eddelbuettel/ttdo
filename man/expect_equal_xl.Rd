@@ -67,7 +67,7 @@ A \code{\link{tinytest}} object. A tinytest object is a
 test that was run
 }
 \description{
-Building on the tinytest functions for testing equalty with optional enhanced object 
+Building on the tinytest functions for testing equality with optional enhanced object 
 diffing and additional test feedback through addtional attributes.
 }
 \details{

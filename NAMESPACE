@@ -3,4 +3,13 @@ importFrom(diffobj, diffPrint)
 
 export(expect_equal_with_diff, expect_equivalent_with_diff)
 export(makeDataFrame)
-export(expect_equal_xl, expect_equivalent_xl, expect_identical_xl)
+export(expect_equal_xl, 
+       expect_equivalent_xl, 
+       expect_identical_xl,
+       expect_true_xl,
+       expect_false_xl,
+       expect_null_xl,
+       expect_silent_xl,
+       expect_error_xl,
+       expect_warning_xl,
+       expect_message_xl)
