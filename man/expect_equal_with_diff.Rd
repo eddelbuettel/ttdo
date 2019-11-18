@@ -3,14 +3,23 @@
 \name{expect_equal_with_diff}
 \alias{expect_equal_with_diff}
 \alias{expect_equivalent_with_diff}
-\title{Test for euality with explicit difference}
+\title{Test for equality with explicit difference}
 \usage{
-expect_equal_with_diff(current, target, tol = sqrt(.Machine$double.eps),
+expect_equal_with_diff(
+  current,
+  target,
+  tol = sqrt(.Machine$double.eps),
   mode = getOption("diffobj.mode", "unified"),
-  format = getOption("diffobj.format", "ansi256"), ...)
+  format = getOption("diffobj.format", "ansi256"),
+  ...
+)
 
-expect_equivalent_with_diff(current, target, tol = sqrt(.Machine$double.eps),
-  ...)
+expect_equivalent_with_diff(
+  current,
+  target,
+  tol = sqrt(.Machine$double.eps),
+  ...
+)
 }
 \arguments{
 \item{current}{\code{[R object or expression]} Outcome or expression under scrutiny.}
@@ -36,7 +45,7 @@ A \code{\link{tinytest}} object. A tinytest object is a
 test that was run
 }
 \description{
-Test for euality with explicit difference
+Test for equality with explicit difference
 }
 \details{
 \code{expect_equivalent_with_diff} calls
