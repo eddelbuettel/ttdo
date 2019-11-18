@@ -1,3 +1,17 @@
+2019-11-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.4
+
+2019-11-17  Alton Barbehenn  <altonbarbehenn@gmail.com>
+
+	* NAMESPACE: Export new functions
+	* R/expectations_xl.R: Add extensions for tinytest predicates to
+	accept and pass on additional parameters, export via templating
+	* R/methods.R: Add generalized data.frame exporter
+	* man/expect_equal_xl.Rd: Document new functions
+	* man/makeDataFrame.Rd: Idem
+	* man/ttdo_boolean_and_message_tests.Rd: Idem
+
 2019-09-13  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .travis.yml: Added Travis CI integration
