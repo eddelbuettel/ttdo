@@ -7,11 +7,13 @@
 makeDataFrame(x)
 }
 \arguments{
-\item{x}{tinytests object}
+\item{x}{a tinytest or tinytests object}
 }
 \description{
 This method extends the \code{as.data.frame.tinytest} method to handle 
-arbitrary attributes attached to each tinytest object.
+arbitrary attributes attached to each tinytest object. You can pass in 
+the results of a single test (a tinytest object) directly or the results 
+of one of the \code{run_test_*} functions (a tinytests object).
 }
 \examples{
 # create a test file in tempdir
@@ -35,4 +37,6 @@ out <- run_test_dir(testdir)
 # convert results
 dat <- makeDataFrame(out)
 dat
+
+dat2 <- makeDataFrame(expect_equal_xl(1-1, 2, useDiffObj = FALSE, name = 'subtr', pts = 1))
 }
