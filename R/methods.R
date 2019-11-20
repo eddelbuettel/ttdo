@@ -1,9 +1,11 @@
 #' Convert tinytest results to data.frame
 #' 
 #' This method extends the \code{as.data.frame.tinytest} method to handle 
-#' arbitrary attributes attached to each tinytest object.
-#'
-#' @param x tinytests object
+#' arbitrary attributes attached to each tinytest object. You can pass in 
+#' the results of a single test (a tinytest object) directly or the results 
+#' of one of the \code{run_test_*} functions (a tinytests object). 
+#' 
+#' @param x a tinytest or tinytests object
 #'
 #' @examples
 #' # create a test file in tempdir
@@ -27,6 +29,8 @@
 #' # convert results
 #' dat <- makeDataFrame(out)
 #' dat
+#' 
+#' dat2 <- makeDataFrame(expect_equal_xl(1-1, 2, useDiffObj = FALSE, name = 'subtr', pts = 1))
 makeDataFrame <- function(x) {
     ## Borrowed from tinytest::as.data.frame.tinytests
     call_conv <- function(x) {
@@ -36,6 +40,9 @@ makeDataFrame <- function(x) {
 
     ## Merge wrapper
     my_merge <- function(x, y) merge(x, y, all = TRUE)
+    
+    ## If passes a test result directly, make it a list like results from the run_test_* functions
+    x <- ifelse(is.list(x), x, list(x))
 
     ## Convert call from language to character
     x <- lapply(x, call_conv)
