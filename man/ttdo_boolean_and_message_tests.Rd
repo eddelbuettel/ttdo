@@ -19,11 +19,29 @@ expect_null_xl(current, info = NA_character_, ...)
 
 expect_silent_xl(current, quiet = TRUE, info = NA_character_, ...)
 
-expect_error_xl(current, pattern = ".*", info = NA_character_, ...)
+expect_error_xl(
+  current,
+  pattern = ".*",
+  class = "error",
+  info = NA_character_,
+  ...
+)
 
-expect_warning_xl(current, pattern = ".*", info = NA_character_, ...)
+expect_warning_xl(
+  current,
+  pattern = ".*",
+  class = "warning",
+  info = NA_character_,
+  ...
+)
 
-expect_message_xl(current, pattern = ".*", info = NA_character_, ...)
+expect_message_xl(
+  current,
+  pattern = ".*",
+  class = "message",
+  info = NA_character_,
+  ...
+)
 }
 \arguments{
 \item{current}{\code{[R object or expression]} Outcome or expression under scrutiny.}
@@ -36,6 +54,9 @@ Multiline comments may be separated by "\\n".}
 \item{quiet}{\code{[logical]} suppress output printed by the current expression (see examples)}
 
 \item{pattern}{\code{[character]} A regular expression to match the message.}
+
+\item{class}{\code{[character]} For condition signals (error, warning, message)
+the class from which the condition should inherit.}
 }
 \value{
 A \code{\link{tinytest}} object. A tinytest object is a

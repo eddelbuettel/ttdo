@@ -95,6 +95,8 @@ expect_equivalent_xl <- function(current, target, useDiffObj = TRUE,
 #' @param current \code{[R object or expression]} Outcome or expression under scrutiny.
 #' @param info scalar. Optional user-defined message. Must be a single character string. 
 #'     Multiline comments may be separated by "\\n".
+#' @param class \code{[character]} For condition signals (error, warning, message)
+#'     the class from which the condition should inherit.
 #' @param ... Passed to \code{all.equal} and returned as a test attribute
 #'
 #' @return A \code{\link{tinytest}} object. A tinytest object is a

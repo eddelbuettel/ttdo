@@ -11,7 +11,9 @@ before_install:
   - ./run.sh bootstrap
 
 install:
-  - ./run.sh install_aptget r-cran-tinytest r-cran-diffobj
+  #- ./run.sh install_aptget r-cran-tinytest r-cran-diffobj
+  - ./run.sh install_aptget r-cran-diffobj
+  - ./run.sh install_r tinytest
   
 script:
   - ./run.sh run_tests

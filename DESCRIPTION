@@ -12,4 +12,4 @@ NeedsCompilation: no
 Encoding: UTF-8
 LazyData: true
 Imports: tinytest, diffobj
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.0
