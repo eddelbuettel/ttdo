@@ -1,7 +1,7 @@
 Package: ttdo
 Title: Extend 'tinytest' with 'diffobj'
-Version: 0.0.4
-Date: 2019-11-18
+Version: 0.0.5
+Date: 2020-05-06
 Author: Dirk Eddelbuettel and Alton Barbehenn
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: The 'tinytest' package offers a light-weight zero-dependency unit-testing
@@ -12,4 +12,4 @@ NeedsCompilation: no
 Encoding: UTF-8
 LazyData: true
 Imports: tinytest, diffobj
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.0
