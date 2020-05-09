@@ -3,6 +3,13 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/ttdo/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/ttdo/issues/#1}{##1}}
 
+\section{Changes in \pkg{ttdo} version 0.0.5 (2020-05-06)}{
+  \itemize{
+    \item Rebuilt under \pkg{tinytest} 1.2.0 to add support for
+    \code{class} argument in error-code test predicates
+  }
+}
+
 \section{Changes in \pkg{ttdo} version 0.0.4 (2019-11-18)}{
   \itemize{
     \item Generalize \pkg{tinytest} extensions with additional arguments for
