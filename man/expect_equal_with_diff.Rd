@@ -35,7 +35,7 @@ defaults to using the \dQuote{diffobj.mode} global option value with
 
 \item{format}{\code{[character]} Comparison mode passed to \code{diffPrint},
 defaults to to using the \dQuote{diffobj.format} global option value with
-\dQuote{raw} as fallback if no such option is set}
+\dQuote{ansi256} as fallback if no such option is set}
 
 \item{...}{Passed to \code{all.equal}}
 }

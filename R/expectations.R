@@ -9,7 +9,7 @@
 #' \dQuote{unified} as fallback if no such option is set
 #' @param format \code{[character]} Comparison mode passed to \code{diffPrint},
 #' defaults to to using the \dQuote{diffobj.format} global option value with
-#' \dQuote{raw} as fallback if no such option is set
+#' \dQuote{ansi256} as fallback if no such option is set
 #' @param ... Passed to \code{all.equal}
 #'
 #' @return A \code{\link{tinytest}} object. A tinytest object is a
