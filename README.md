@@ -20,6 +20,14 @@ Glad you asked:
 
 ![](https://eddelbuettel.github.io/ttdo/ttdoDemo.png)
 
+To test it out yourself, the code is in
+[demo/expect_equal_with_diff.R](https://github.com/eddelbuettel/ttdo/blob/master/demo/expect_equal_with_diff.R).
+If you don't see the same results as above, you may need to manually adjust the
+diffobj package options. Try `options(diffobj.format = "ansi256")`. See
+[Controlling Diffs and Their
+Appearance](https://cran.r-project.org/package=diffobj/vignettes/diffobj.html#controlling-diffs-and-their-appearance)
+for more details.
+
 ### How do install it?
 
 The package is now on [CRAN](https://cran.r-project.org) and can be installed
