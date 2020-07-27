@@ -54,7 +54,7 @@ expect_identical_xl <- function(current, target, useDiffObj = TRUE, info = NA_ch
                                 format = getOption("diffobj.format", "ansi256"),
                                 ...) {
     # Run tinytest unittest
-    tt_res <- tinytest::expect_equivalent(current = current, target = target, info = info)
+    tt_res <- tinytest::expect_identical(current = current, target = target, info = info)
 
     # Add custom object diff (if requested)
     if (useDiffObj)

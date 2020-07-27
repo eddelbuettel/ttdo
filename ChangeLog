@@ -1,3 +1,8 @@
+2020-07-27  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/expectations_xl.R (expect_identical_xl): Correct likely
+	copy-and-paste error with thanks to John Blischak
+
 2020-05-06  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version,Date): Release 0.0.5
