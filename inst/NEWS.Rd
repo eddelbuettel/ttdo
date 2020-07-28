@@ -3,6 +3,12 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/ttdo/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/ttdo/issues/#1}{##1}}
 
+\section{Changes in \pkg{ttdo} version 0.0.6 (2020-07-27)}{
+  \itemize{
+    \item Correct a minor editing mistake spotted by John Blischak.
+  }
+}
+
 \section{Changes in \pkg{ttdo} version 0.0.5 (2020-05-06)}{
   \itemize{
     \item Rebuilt under \pkg{tinytest} 1.2.0 to add support for
