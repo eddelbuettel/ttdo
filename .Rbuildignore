@@ -1,6 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^\.travis.yml$
+^\.travis\.yml$
 ^local
 ^\.codecov\.yml$
 ^.editorconfig$
@@ -9,3 +9,4 @@
 ^GRTAGS
 ^GTAGS
 ^docs
+^\.github

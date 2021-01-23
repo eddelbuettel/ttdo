@@ -1,3 +1,7 @@
+2021-01-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .Rbuildignore: 
+
 2020-07-27  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version,Date): Release 0.0.6
