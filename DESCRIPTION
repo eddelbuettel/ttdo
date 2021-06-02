@@ -8,6 +8,8 @@ Description: The 'tinytest' package offers a light-weight zero-dependency unit-t
  framework to which this package adds support of the 'diffobj' package for 'diff'-style
  comparison of R objects.
 License: GPL (>= 2)
+URL: https://github.com/eddelbuettel/ttdo/, https://dirk.eddelbuettel.com/code/ttdo.html
+BugReports: https://github.com/eddelbuettel/ttdo/issues
 NeedsCompilation: no
 Encoding: UTF-8
 LazyData: true
