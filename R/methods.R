@@ -48,7 +48,7 @@ makeDataFrame <- function(x) {
     x <- lapply(x, call_conv)
 
     ## Make each test result a data.frame
-    x <- lapply(x, function(tt) data.frame(result = isTRUE(tt), attributes(tt)))
+    x <- lapply(x, function(tt) data.frame(result = isTRUE(tt), attributes(tt)[1:8]))
 
     ## Collapse data.frames
     Reduce(my_merge, x)
