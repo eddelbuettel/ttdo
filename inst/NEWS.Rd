@@ -3,6 +3,17 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/ttdo/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/ttdo/issues/#1}{##1}}
 
+\section{Changes in \pkg{ttdo} version 0.0.7 (2021-07-06)}{
+  \itemize{
+    \item The CI setup was updated to use \code{run.sh} from
+    \href{https://eddelbuettel.github.io/r-ci/}{r-ci} (Dirk).
+    \item The package was updated for an API extension in \pkg{tinytest}
+    1.3.1 or later (Mark van der Look in \ghpr{7})
+    \item The unused \code{LazyData} field was removed from
+    \code{DESCRIPTION} (Dirk)
+  }
+}
+
 \section{Changes in \pkg{ttdo} version 0.0.6 (2020-07-27)}{
   \itemize{
     \item Correct a minor editing mistake spotted by John Blischak.
