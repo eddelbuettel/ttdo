@@ -1,6 +1,6 @@
 Package: ttdo
 Title: Extend 'tinytest' with 'diffobj'
-Version: 0.0.6
+Version: 0.0.6.2
 Date: 2020-07-27
 Author: Dirk Eddelbuettel and Alton Barbehenn
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
