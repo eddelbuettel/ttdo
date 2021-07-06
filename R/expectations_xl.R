@@ -120,7 +120,7 @@ template = '{
 }'
 
 ## Borrowed heavily from checkmate.tinytest
-supersize <- function(tt.fun, env = parent.frame()) {
+supersize <- function(tt.fun, env = parent.frame(), ellipsis=TRUE) {
     fun.name = if (!is.character(tt.fun)) deparse(substitute(tt.fun)) else tt.fun
     tt.fun = match.fun(tt.fun)
     fun.args = formals(args(tt.fun))
@@ -128,7 +128,8 @@ supersize <- function(tt.fun, env = parent.frame()) {
     body = sprintf(template, x.name, fun.name, paste0(names(fun.args), collapse = ", "))
 
     # Append the ... operator to formals
-    new.args <- do.call(alist, c(fun.args, alist(... =)))
+    new.args <- if (ellipsis) do.call(alist, c(fun.args, alist(... =)))
+                else do.call(alist, as.list(fun.args))
 
     new.fun = function() TRUE
     formals(new.fun) = new.args
@@ -154,10 +155,10 @@ expect_silent_xl <- supersize(tinytest::expect_silent)
 
 #' @rdname ttdo_boolean_and_message_tests
 #' @param pattern \code{[character]} A regular expression to match the message.
-expect_error_xl <- supersize(tinytest::expect_error)
+expect_error_xl <- supersize(tinytest::expect_error, ellipsis=FALSE)
 
 #' @rdname ttdo_boolean_and_message_tests
-expect_warning_xl <- supersize(tinytest::expect_warning)
+expect_warning_xl <- supersize(tinytest::expect_warning, ellipsis=FALSE)
 
 #' @rdname ttdo_boolean_and_message_tests
-expect_message_xl <- supersize(tinytest::expect_message)
+expect_message_xl <- supersize(tinytest::expect_message, ellipsis=FALSE)
