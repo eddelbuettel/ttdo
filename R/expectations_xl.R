@@ -115,6 +115,7 @@ NULL
 
 
 template = '{
+    # function name: %1$s
     tt_res <- %2$s(%3$s)
     structure(tt_res, ...)
 }'
