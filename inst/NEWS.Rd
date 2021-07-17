@@ -3,6 +3,12 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/ttdo/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/ttdo/issues/#1}{##1}}
 
+\section{Changes in \pkg{ttdo} version 0.0.8 (2021-07-17)}{
+  \itemize{
+    \item Expand sprintf template to suppress R warning
+  }
+}
+
 \section{Changes in \pkg{ttdo} version 0.0.7 (2021-07-06)}{
   \itemize{
     \item The CI setup was updated to use \code{run.sh} from

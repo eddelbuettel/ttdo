@@ -1,3 +1,7 @@
+2021-07-17  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.8
+
 2021-07-08  Dirk Eddelbuettel  <edd@debian.org>
 
 	* R/expectations_xl.R (expect_equivalent_xl): Use first sprintf
