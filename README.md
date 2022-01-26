@@ -1,6 +1,5 @@
 ## ttdo: Extend 'tinytest' with 'diffobj'
 
-[![Build Status](https://travis-ci.org/eddelbuettel/ttdo.svg)](https://travis-ci.org/eddelbuettel/ttdo) 
 [![CI](https://github.com/eddelbuettel/ttdo/workflows/ci/badge.svg)](https://github.com/eddelbuettel/ttdo/actions?query=workflow%3Aci)
 [![License](https://eddelbuettel.github.io/badges/GPL2+.svg)](https://www.gnu.org/licenses/gpl-2.0.html) 
 [![CRAN](https://www.r-pkg.org/badges/version/ttdo)](https://cran.r-project.org/package=ttdo)
