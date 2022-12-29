@@ -12,7 +12,7 @@
 #' @param useDiffObj \code{[logical]} Whether you should use \code{diffPrint} for the diff field 
 #' in the resulting tinytest object 
 #' @param tol \code{[numeric]} Test equality to machine rounding. Passed
-#'     to \code{\link[base]{all.equal} (tolerance)}
+#' to \code{\link[base]{all.equal} (tolerance)}
 #' @param info An additional attribute to pass around with the tinytest object
 #' @param mode \code{[character]} Comparison mode passed to \code{diffPrint},
 #' defaults to using the \dQuote{diffobj.mode} global option value with
@@ -21,7 +21,8 @@
 #' defaults to to using the \dQuote{diffobj.format} global option value with
 #' \dQuote{ansi256} as fallback if no such option is set
 #' @param strict \code{[logical]} scalar. If set to \code{TRUE}, any exception 
-#'        worse than the wanted exception will cause the test to fail.
+#' worse than the wanted exception will cause the test to fail. The default value
+#' is \code{FALSE}.
 #' @param ... Passed to \code{all.equal} and returned as a test attributes
 #'
 #' @return A \code{\link{tinytest}} object. A tinytest object is a
@@ -37,9 +38,10 @@ expect_equal_xl <- function(current, target, useDiffObj = TRUE,
                             tol = sqrt(.Machine$double.eps), info = NA_character_,
                             mode = getOption("diffobj.mode", "unified"),
                             format = getOption("diffobj.format", "ansi256"),
-                            ...) {
+                            strict = FALSE, ...) {
     # Run tinytest unittest
-    tt_res <- tinytest::expect_equal(current = current, target = target, tol = tol, info = info, ...)
+    tt_res <- tinytest::expect_equal(current = current, target = target, tol = tol,
+                                     info = info, strict = strict, ...)
 
     # Add custom object diff (if requested)
     if (useDiffObj)
@@ -54,9 +56,10 @@ expect_equal_xl <- function(current, target, useDiffObj = TRUE,
 expect_identical_xl <- function(current, target, useDiffObj = TRUE, info = NA_character_, 
                                 mode = getOption("diffobj.mode", "unified"),
                                 format = getOption("diffobj.format", "ansi256"),
-                                ...) {
+                                strict = FALSE, ...) {
     # Run tinytest unittest
-    tt_res <- tinytest::expect_identical(current = current, target = target, info = info)
+    tt_res <- tinytest::expect_identical(current = current, target = target,
+                                         info = info, strict = strict)
 
     # Add custom object diff (if requested)
     if (useDiffObj)
@@ -72,9 +75,10 @@ expect_equivalent_xl <- function(current, target, useDiffObj = TRUE,
                                  tol = sqrt(.Machine$double.eps), info = NA_character_,
                                  mode = getOption("diffobj.mode", "unified"),
                                  format = getOption("diffobj.format", "ansi256"),
-                                 ...) {
+                                 strict = FALSE, ...) {
     # Run tinytest unittest
-    tt_res <- tinytest::expect_equivalent(current = current, target = target, tol = tol, info = info, ...)
+    tt_res <- tinytest::expect_equivalent(current = current, target = target, tol = tol,
+                                          info = info, , strict = strict, ...)
 
     # Add custom object diff (if requested)
     if (useDiffObj)
