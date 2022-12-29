@@ -1,3 +1,12 @@
+2022-12-29  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/expectations_xl.R: Add 'strict' argument to code
+	* man/expect_equal_xl.Rd: Update documentation
+
+2022-12-29  Mark van der Loo  <mark.vanderloo@gmail.com>
+
+	* R/expectations_xl.R: Add new 'strict' argument
+
 2022-12-05  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .github/workflows/ci.yaml (jobs): Update to actions/checkout@v3
