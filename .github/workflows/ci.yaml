@@ -31,6 +31,9 @@ jobs:
       - name: Dependencies
         run: ./run.sh install_deps
 
+      - name: Avoid breakage cause by PR #9
+        run: ./run.sh install_github markvanderloo/tinytest/pkg
+
       - name: Test
         run: ./run.sh run_tests
 
