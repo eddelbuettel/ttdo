@@ -20,6 +20,8 @@
 #' @param format \code{[character]} Comparison mode passed to \code{diffPrint},
 #' defaults to to using the \dQuote{diffobj.format} global option value with
 #' \dQuote{ansi256} as fallback if no such option is set
+#' @param strict \code{[logical]} scalar. If set to \code{TRUE}, any exception 
+#'        worse than the wanted exception will cause the test to fail.
 #' @param ... Passed to \code{all.equal} and returned as a test attributes
 #'
 #' @return A \code{\link{tinytest}} object. A tinytest object is a
