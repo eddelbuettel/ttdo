@@ -14,7 +14,6 @@ expect_equal_xl(
   info = NA_character_,
   mode = getOption("diffobj.mode", "unified"),
   format = getOption("diffobj.format", "ansi256"),
-  strict = FALSE,
   ...
 )
 
@@ -25,7 +24,6 @@ expect_identical_xl(
   info = NA_character_,
   mode = getOption("diffobj.mode", "unified"),
   format = getOption("diffobj.format", "ansi256"),
-  strict = FALSE,
   ...
 )
 
@@ -37,7 +35,6 @@ expect_equivalent_xl(
   info = NA_character_,
   mode = getOption("diffobj.mode", "unified"),
   format = getOption("diffobj.format", "ansi256"),
-  strict = FALSE,
   ...
 )
 }
@@ -61,10 +58,6 @@ defaults to using the \dQuote{diffobj.mode} global option value with
 \item{format}{\code{[character]} Comparison mode passed to \code{diffPrint},
 defaults to to using the \dQuote{diffobj.format} global option value with
 \dQuote{ansi256} as fallback if no such option is set}
-
-\item{strict}{\code{[logical]} scalar. If set to \code{TRUE}, any exception 
-worse than the wanted exception will cause the test to fail. The default value
-is \code{FALSE}.}
 
 \item{...}{Passed to \code{all.equal} and returned as a test attributes}
 }

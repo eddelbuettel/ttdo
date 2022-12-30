@@ -32,6 +32,7 @@ expect_warning_xl(
   pattern = ".*",
   class = "warning",
   info = NA_character_,
+  strict = FALSE,
   ...
 )
 
@@ -40,6 +41,7 @@ expect_message_xl(
   pattern = ".*",
   class = "message",
   info = NA_character_,
+  strict = FALSE,
   ...
 )
 }
@@ -57,6 +59,10 @@ Multiline comments may be separated by "\\n".}
 
 \item{class}{\code{[character]} For condition signals (error, warning, message)
 the class from which the condition should inherit.}
+
+\item{strict}{\code{[logical]} scalar. If set to \code{TRUE}, any exception
+worse than the wanted exception will cause the test to fail. The default value
+is \code{FALSE}.}
 }
 \value{
 A \code{\link{tinytest}} object. A tinytest object is a

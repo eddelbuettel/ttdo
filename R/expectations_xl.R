@@ -20,9 +20,6 @@
 #' @param format \code{[character]} Comparison mode passed to \code{diffPrint},
 #' defaults to to using the \dQuote{diffobj.format} global option value with
 #' \dQuote{ansi256} as fallback if no such option is set
-#' @param strict \code{[logical]} scalar. If set to \code{TRUE}, any exception 
-#' worse than the wanted exception will cause the test to fail. The default value
-#' is \code{FALSE}.
 #' @param ... Passed to \code{all.equal} and returned as a test attributes
 #'
 #' @return A \code{\link{tinytest}} object. A tinytest object is a
@@ -38,10 +35,9 @@ expect_equal_xl <- function(current, target, useDiffObj = TRUE,
                             tol = sqrt(.Machine$double.eps), info = NA_character_,
                             mode = getOption("diffobj.mode", "unified"),
                             format = getOption("diffobj.format", "ansi256"),
-                            strict = FALSE, ...) {
+                            ...) {
     # Run tinytest unittest
-    tt_res <- tinytest::expect_equal(current = current, target = target, tol = tol,
-                                     info = info, strict = strict, ...)
+    tt_res <- tinytest::expect_equal(current = current, target = target, tol = tol, info = info, ...)
 
     # Add custom object diff (if requested)
     if (useDiffObj)
@@ -56,10 +52,9 @@ expect_equal_xl <- function(current, target, useDiffObj = TRUE,
 expect_identical_xl <- function(current, target, useDiffObj = TRUE, info = NA_character_, 
                                 mode = getOption("diffobj.mode", "unified"),
                                 format = getOption("diffobj.format", "ansi256"),
-                                strict = FALSE, ...) {
+                                ...) {
     # Run tinytest unittest
-    tt_res <- tinytest::expect_identical(current = current, target = target,
-                                         info = info, strict = strict)
+    tt_res <- tinytest::expect_identical(current = current, target = target, info = info, ...)
 
     # Add custom object diff (if requested)
     if (useDiffObj)
@@ -75,10 +70,9 @@ expect_equivalent_xl <- function(current, target, useDiffObj = TRUE,
                                  tol = sqrt(.Machine$double.eps), info = NA_character_,
                                  mode = getOption("diffobj.mode", "unified"),
                                  format = getOption("diffobj.format", "ansi256"),
-                                 strict = FALSE, ...) {
+                                 ...) {
     # Run tinytest unittest
-    tt_res <- tinytest::expect_equivalent(current = current, target = target, tol = tol,
-                                          info = info, , strict = strict, ...)
+    tt_res <- tinytest::expect_equivalent(current = current, target = target, tol = tol, info = info, ...)
 
     # Add custom object diff (if requested)
     if (useDiffObj)
@@ -100,16 +94,19 @@ expect_equivalent_xl <- function(current, target, useDiffObj = TRUE,
 #'
 #' @param current \code{[R object or expression]} Outcome or expression under scrutiny.
 #' @param info scalar. Optional user-defined message. Must be a single character string. 
-#'     Multiline comments may be separated by "\\n".
+#' Multiline comments may be separated by "\\n".
 #' @param class \code{[character]} For condition signals (error, warning, message)
-#'     the class from which the condition should inherit.
+#' the class from which the condition should inherit.
+#' @param strict \code{[logical]} scalar. If set to \code{TRUE}, any exception
+#' worse than the wanted exception will cause the test to fail. The default value
+#' is \code{FALSE}.
 #' @param ... Passed to \code{all.equal} and returned as a test attribute
 #'
 #' @return A \code{\link{tinytest}} object. A tinytest object is a
 #' \code{logical} with attributes holding information about the
 #' test that was run
 #'
-
+#'
 #' @examples
 #' library(tinytest)
 #' using(ttdo)
