@@ -12,7 +12,7 @@
 #' @param useDiffObj \code{[logical]} Whether you should use \code{diffPrint} for the diff field 
 #' in the resulting tinytest object 
 #' @param tol \code{[numeric]} Test equality to machine rounding. Passed
-#'     to \code{\link[base]{all.equal} (tolerance)}
+#' to \code{\link[base]{all.equal} (tolerance)}
 #' @param info An additional attribute to pass around with the tinytest object
 #' @param mode \code{[character]} Comparison mode passed to \code{diffPrint},
 #' defaults to using the \dQuote{diffobj.mode} global option value with
@@ -54,7 +54,7 @@ expect_identical_xl <- function(current, target, useDiffObj = TRUE, info = NA_ch
                                 format = getOption("diffobj.format", "ansi256"),
                                 ...) {
     # Run tinytest unittest
-    tt_res <- tinytest::expect_identical(current = current, target = target, info = info)
+    tt_res <- tinytest::expect_identical(current = current, target = target, info = info, ...)
 
     # Add custom object diff (if requested)
     if (useDiffObj)
@@ -94,16 +94,19 @@ expect_equivalent_xl <- function(current, target, useDiffObj = TRUE,
 #'
 #' @param current \code{[R object or expression]} Outcome or expression under scrutiny.
 #' @param info scalar. Optional user-defined message. Must be a single character string. 
-#'     Multiline comments may be separated by "\\n".
+#' Multiline comments may be separated by "\\n".
 #' @param class \code{[character]} For condition signals (error, warning, message)
-#'     the class from which the condition should inherit.
+#' the class from which the condition should inherit.
+#' @param strict \code{[logical]} scalar. If set to \code{TRUE}, any exception
+#' worse than the wanted exception will cause the test to fail. The default value
+#' is \code{FALSE}.
 #' @param ... Passed to \code{all.equal} and returned as a test attribute
 #'
 #' @return A \code{\link{tinytest}} object. A tinytest object is a
 #' \code{logical} with attributes holding information about the
 #' test that was run
 #'
-
+#'
 #' @examples
 #' library(tinytest)
 #' using(ttdo)
