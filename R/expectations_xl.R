@@ -97,6 +97,8 @@ expect_equivalent_xl <- function(current, target, useDiffObj = TRUE,
 #'     Multiline comments may be separated by "\\n".
 #' @param class \code{[character]} For condition signals (error, warning, message)
 #'     the class from which the condition should inherit.
+#' @param strict \code{[logical]} scalar. If set to \code{TRUE}, any exception 
+#'        worse than the wanted exception will cause the test to fail.
 #' @param ... Passed to \code{all.equal} and returned as a test attribute
 #'
 #' @return A \code{\link{tinytest}} object. A tinytest object is a
