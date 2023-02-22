@@ -3,6 +3,14 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/ttdo/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/ttdo/issues/#1}{##1}}
 
+\section{Changes in \pkg{ttdo} version 0.0.9 (2023-02-21)}{
+  \itemize{
+    \item Minor cleanup in README.md
+    \item Minor continuous integration update
+    \item Updated (versioned) depends on \pkg{tinytest} to 1.4.1
+  }
+}
+
 \section{Changes in \pkg{ttdo} version 0.0.8 (2021-07-17)}{
   \itemize{
     \item Expand sprintf template to suppress R warning
