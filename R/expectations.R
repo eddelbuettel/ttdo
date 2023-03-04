@@ -38,7 +38,7 @@ expect_equal_with_diff <- function(current, target, tol = sqrt(.Machine$double.e
     check <- all.equal(target, current, tol=tol, ...)
     equal <- isTRUE(check)
     diff  <- if (equal) NA_character_
-             else paste(as.character(diffPrint(current, target, mode=mode, format=format)),
+             else paste(as.character(diffPrint(target, current, mode=mode, format=format)),
                         collapse="\n")
     short <- if (equal) NA_character_
              else .shortdiff(current, target, tolerance=tol)
