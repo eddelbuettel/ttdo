@@ -2,8 +2,10 @@ Package: ttdo
 Title: Extend 'tinytest' with 'diffobj'
 Version: 0.0.9
 Date: 2023-02-21
-Author: Dirk Eddelbuettel and Alton Barbehenn
-Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Authors@R: c(person("Dirk", "Eddelbuettel", role = c("aut", "cre"), email = "edd@debian.org",
+                    comment = c(ORCID = "0000-0001-6419-907X")),
+             person("Alton", "Barbehenn", role = "aut",
+                    comment = c(ORCID = "0009-0000-3364-7204")))
 Description: The 'tinytest' package offers a light-weight zero-dependency unit-testing
  framework to which this package adds support of the 'diffobj' package for 'diff'-style
  comparison of R objects.
