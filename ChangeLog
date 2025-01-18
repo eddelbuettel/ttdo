@@ -1,3 +1,16 @@
+2025-01-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll micro version and date
+
+	* R/visual.R (expect_visual_equal_with_diff): New 'visual diff'
+	equality expectation returning 'diff' image if not equal
+	* man/expect_visual_equal_with_diff.Rd: Documentation
+	* NAMESPACE: New imports
+
+2025-01-15  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll micro version and date
+
 2024-12-12  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Authors@R): Added

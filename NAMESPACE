@@ -1,10 +1,14 @@
 import(tinytest)
 importFrom(diffobj, diffPrint)
+importFrom(base64enc, base64encode)
+importFrom(tinysnapshot, expect_equivalent_images)
 importFrom(utils, capture.output)
 
-export(expect_equal_with_diff, expect_equivalent_with_diff)
-export(makeDataFrame)
-export(expect_equal_xl, 
+export(expect_equal_with_diff,
+       expect_equivalent_with_diff,
+       expect_visual_equal_with_diff,
+       makeDataFrame,
+       expect_equal_xl, 
        expect_equivalent_xl, 
        expect_identical_xl,
        expect_true_xl,
