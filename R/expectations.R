@@ -14,7 +14,8 @@
 #'
 #' @return A \code{\link{tinytest}} object. A tinytest object is a
 #' \code{logical} with attributes holding information about the
-#' test that was run
+#' test that was run. The class attribute is set to \code{c("ttdo", "tinytest")}
+#' to signal that it is a 'diffobj' result.
 #'
 #' @examples
 #' library(tinytest)
@@ -35,14 +36,23 @@ expect_equal_with_diff <- function(current, target, tol = sqrt(.Machine$double.e
         if (isTRUE(equivalent_data)) "attr" else "data"
     }
 
+    ## run comparison, construct additional output if difference seen 
     check <- all.equal(target, current, tol=tol, ...)
-    equal <- isTRUE(check)
-    diff  <- if (equal) NA_character_
-             else paste(as.character(diffPrint(target, current, mode=mode, format=format)),
-                        collapse="\n")
-    short <- if (equal) NA_character_
-             else .shortdiff(current, target, tolerance=tol)
-    tinytest(result = equal, call = sys.call(sys.parent(1)), diff=diff, short=short)
+    if (isTRUE(check)) {
+        diff <- NA_character_
+        short <- NA_character_
+    } else {
+        diff <- paste(as.character(diffPrint(target, current, mode=mode, format=format)), collapse="\n")
+        short <- .shortdiff(current, target, tolerance=tol)
+    }
+
+    ## create test output, subclass if difference
+    res <- tinytest(result = isTRUE(check), call = sys.call(sys.parent(1)), diff=diff, short=short)
+    if (isFALSE(res)) {
+        class(res) <- c("ttdo", class(res))
+    }
+
+    res
 }
 
 #' @details
