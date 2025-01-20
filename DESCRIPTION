@@ -16,7 +16,3 @@ NeedsCompilation: no
 Encoding: UTF-8
 Imports: tinytest (>= 1.4.1), diffobj, tinysnapshot, base64enc
 RoxygenNote: 7.3.2
-Packaged: 2025-01-16 01:08:36 UTC; edd
-Author: Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>),
-  Alton Barbehenn [aut] (<https://orcid.org/0009-0000-3364-7204>)
-Maintainer: Dirk Eddelbuettel <edd@debian.org>
