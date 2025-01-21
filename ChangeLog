@@ -1,3 +1,13 @@
+2025-01-21  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.0.10
+
+	* DESCRIPTION (Title, Description): Expanded mentioning 'visual diff'
+
+	* R/expectations.R: Set anchors to all documentation links to packages
+	* R/expectations_xl.R: Ditto
+	* man/*: Regenerated
+
 2025-01-20  Dirk Eddelbuettel  <edd@debian.org>
 
 	* R/expectations.R (expect_equal_with_diff): Return subclassed result

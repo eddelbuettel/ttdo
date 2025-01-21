@@ -3,6 +3,21 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/ttdo/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/ttdo/issues/#1}{##1}}
 
+\section{Changes in \pkg{ttdo} version 0.0.10 (2025-01-21)}{
+  \itemize{
+    \item Regular packaging updates to badges and continuous integration
+    setup
+    \item Add support for a 'visual difference' taking advantage of a
+    \pkg{tinysnapshot} feature returning a \code{ttvd}-typed result
+    \item Added (versioned) dependency on \pkg{tinysnapshot} (to also get the
+    plot 'style' enhancement in the most recent version) and \pkg{base64enc}
+    \item Return \code{ttdo}-typed result if \pkg{diffobj}-printed result is
+    returned
+    \item Ensure all package-documentation links in manual page have anchors
+    to the package
+  }
+}
+
 \section{Changes in \pkg{ttdo} version 0.0.9 (2023-02-21)}{
   \itemize{
     \item Minor cleanup in README.md
