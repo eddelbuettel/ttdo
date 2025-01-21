@@ -40,9 +40,10 @@ defaults to to using the \dQuote{diffobj.format} global option value with
 \item{...}{Passed to \code{all.equal}}
 }
 \value{
-A \code{\link{tinytest}} object. A tinytest object is a
+A \code{\link[tinytest]{tinytest}} object. A tinytest object is a
 \code{logical} with attributes holding information about the
-test that was run
+test that was run. The class attribute is set to \code{c("ttdo", "tinytest")}
+to signal that it is a 'diffobj' result.
 }
 \description{
 Test for equality with explicit difference

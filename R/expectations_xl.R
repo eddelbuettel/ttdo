@@ -22,7 +22,7 @@
 #' \dQuote{ansi256} as fallback if no such option is set
 #' @param ... Passed to \code{all.equal} and returned as a test attributes
 #'
-#' @return A \code{\link{tinytest}} object. A tinytest object is a
+#' @return A \code{\link[tinytest]{tinytest}} object. A tinytest object is a
 #' \code{logical} with attributes holding information about the
 #' test that was run
 #'
@@ -101,7 +101,7 @@ expect_equivalent_xl <- function(current, target, useDiffObj = TRUE,
 #'        worse than the wanted exception will cause the test to fail.
 #' @param ... Passed to \code{all.equal} and returned as a test attribute
 #'
-#' @return A \code{\link{tinytest}} object. A tinytest object is a
+#' @return A \code{\link[tinytest]{tinytest}} object. A tinytest object is a
 #' \code{logical} with attributes holding information about the
 #' test that was run
 #'

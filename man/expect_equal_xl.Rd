@@ -62,7 +62,7 @@ defaults to to using the \dQuote{diffobj.format} global option value with
 \item{...}{Passed to \code{all.equal} and returned as a test attributes}
 }
 \value{
-A \code{\link{tinytest}} object. A tinytest object is a
+A \code{\link[tinytest]{tinytest}} object. A tinytest object is a
 \code{logical} with attributes holding information about the
 test that was run
 }

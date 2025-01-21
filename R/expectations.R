@@ -12,7 +12,7 @@
 #' \dQuote{ansi256} as fallback if no such option is set
 #' @param ... Passed to \code{all.equal}
 #'
-#' @return A \code{\link{tinytest}} object. A tinytest object is a
+#' @return A \code{\link[tinytest]{tinytest}} object. A tinytest object is a
 #' \code{logical} with attributes holding information about the
 #' test that was run. The class attribute is set to \code{c("ttdo", "tinytest")}
 #' to signal that it is a 'diffobj' result.

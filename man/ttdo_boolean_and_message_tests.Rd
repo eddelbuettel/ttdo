@@ -64,7 +64,7 @@ the class from which the condition should inherit.}
 worse than the wanted exception will cause the test to fail.}
 }
 \value{
-A \code{\link{tinytest}} object. A tinytest object is a
+A \code{\link[tinytest]{tinytest}} object. A tinytest object is a
 \code{logical} with attributes holding information about the
 test that was run
 }
