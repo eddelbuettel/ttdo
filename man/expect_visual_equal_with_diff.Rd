@@ -31,4 +31,7 @@ the candidate plot, and \dQuote{diff} can be set as value to the global option
 \code{tinysnapshot_plot_diff_style}. For example settings \code{c("old", "new", "diff")}
 shows all three, setting \code{c("new", "diff")} just these two. The default is to only show
 the \sQuote{diff} plot.
+
+The data format used for returning the PNG image created is described in
+\url{https://en.wikipedia.org/wiki/Data_URI_scheme}.
 }

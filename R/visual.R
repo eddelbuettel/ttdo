@@ -11,6 +11,9 @@
 #' shows all three, setting \code{c("new", "diff")} just these two. The default is to only show
 #' the \sQuote{diff} plot.
 #'
+#' The data format used for returning the PNG image created is described in
+#' \url{https://en.wikipedia.org/wiki/Data_URI_scheme}.
+#'
 #' @param reference Character value with filename of reference plot, should be png
 #' @param proposed Character value with filename of proposed solution, should be png
 #' @param difference Character value with filename for difference plot (if plots differ)
