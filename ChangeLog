@@ -1,3 +1,7 @@
+2025-01-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Add r-universe badge
+
 2025-01-22  Dirk Eddelbuettel  <edd@debian.org>
 
 	* R/visual.R: Add reference to 'data URI scheme' used to return png
