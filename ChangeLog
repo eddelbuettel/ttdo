@@ -1,3 +1,7 @@
+2025-11-05  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .github/workflows/ci.yaml: Use r-ci with embedded bootstrap
+
 2025-01-23  Dirk Eddelbuettel  <edd@debian.org>
 
 	* README.md: Add r-universe badge
